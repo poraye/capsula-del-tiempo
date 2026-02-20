@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrega de la carta 💌</title>
+  <link rel="stylesheet" href="pantalla-entrega.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Pantalla de entrega 💖</h1>
+    <p class="muted" id="subtitulo">Ingresa la clave compartida para validar la entrega.</p>
+
+    <section class="box">
+      <label for="claveLectura">Clave compartida</label>
+      <input id="claveLectura" type="password" placeholder="Escribe la clave" autocomplete="off" />
+      <div class="actions">
+        <button id="btnLeer" type="button">Validar y abrir lectura</button>
+      </div>
+    </section>
+
+    <p id="estado" class="status">Esperando clave…</p>
+  </main>
+
+  <script src="pantalla-entrega.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cápsula del tiempo 💌</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <div class="shine" aria-hidden="true"></div>
+    <h1>Cápsula del tiempo para ti 💌</h1>
+    <div class="tag">Se escribe el 10/03/2026 · Se abre desde el 10/03/2027</div>
+
+    <p>
+      Esta carta es para tu “yo del futuro”. Solo ustedes dos pueden verla usando su
+      <strong>clave compartida</strong>. Queda guardada en este navegador y estará bloqueada
+      hasta la fecha de entrega.
+    </p>
+
+    <div class="box">
+      <strong>Fecha de apertura:</strong> <span id="fechaAperturaTexto">10 de marzo de 2027</span><br />
+      <span id="contadorBloqueo" class="muted">Calculando tiempo restante...</span>
+      <br />
+      <span id="estadoCapsula" class="muted">Estado de cápsula: revisando...</span>
+    </div>
+
+    <section class="grid">
+      <div>
+        <label for="clave">Clave compartida (solo ustedes la saben)</label>
+        <input id="clave" type="password" placeholder="Ejemplo: nuestro-secreto-2026" autocomplete="off" />
+      </div>
+      <div>
+        <label for="titulo">Título de la carta</label>
+        <input id="titulo" type="text" maxlength="80" placeholder="Carta para mi yo de marzo 2027" />
+      </div>
+      <div>
+        <label for="contenido">Carta para ella misma</label>
+        <textarea id="contenido" placeholder="Escribe aquí lo que quieres recordar dentro de un año..."></textarea>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="btnGuardar" class="primary" type="button">Guardar carta sellada</button>
+      <button id="btnAbrir" class="secondary" type="button">Abrir entrega (otra ventana)</button>
+      <button id="btnExportar" class="secondary" type="button">Exportar respaldo</button>
+      <button id="btnImportar" class="secondary" type="button">Importar respaldo</button>
+      <button id="btnBorrar" class="secondary" type="button">Borrar carta guardada</button>
+      <input id="inputImportar" type="file" accept="application/json,.json" hidden />
+    </section>
+
+    <div id="estado" class="status" aria-live="polite">Lista para crear la cápsula del tiempo 💖</div>
+
+    <p class="muted">
+      Nota: la privacidad aquí es local (en este navegador/dispositivo). Para que nadie más la abra,
+      compartan una clave fuerte y no la guarden en público.
+    </p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
